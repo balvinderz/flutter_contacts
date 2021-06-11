@@ -240,9 +240,9 @@ public enum FlutterContacts {
             Event(fromMap: $0).addTo(contact)
         }
         if #available(iOS 13, *), !includeNotesOnIos13AndAbove {} else {
-            if let note = (args["notes"] as! [[String: Any]]).first {
-                Note(fromMap: note).addTo(contact)
-            }
+//             if let note = (args["notes"] as! [[String: Any]]).first {
+//                 Note(fromMap: note).addTo(contact)
+//             }
         }
         if let photo = args["photo"] as? FlutterStandardTypedData {
             contact.imageData = photo.data
